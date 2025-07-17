@@ -1,12 +1,750 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iglesia</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doble A Creditos - Creditos al Instante</title>
+    <link rel="icon" href="src/logo1.webp" type="image/png">
+    <meta name="description" content="Mudanzas rápidas y seguras en Paraguay. Contáctanos para un traslado sin estrés." />
+    <meta name="author" content="MC Fletes y Mudanzas" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Servicios de Mudanza en Paraguay - Rápidos y Seguros" />
+    <meta property="og:description" content="Mudanzas rápidas y seguras en Paraguay. Contáctanos para un traslado sin estrés." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="src/logo1" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@lovable_dev" />
+    <meta name="twitter:image" content="https://fletesymudanzasparaguay.online/img/logo_web_500x500.png" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&family=Open+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#222842',
+                        secondary: '#00d0ab',
+                        'secondary-hover': '#00b897',
+                        tertiary: '#f5f7fa',
+                    },
+                    fontFamily: {
+                        raleway: ['Raleway', 'sans-serif'],
+                        opensans: ['Open Sans', 'sans-serif'],
+                    },
+                },
+            },
+        };
+    </script>
+    <!-- ✅ Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XGND2KEQ29"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XGND2KEQ29')
+      gtag('config', 'AW-16920858087');;
+    </script>
+
+        <!-- Event snippet for Solicitud de presupuesto conversion page
+    In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+    <script>
+        function gtag_report_conversion(url) {
+          var callback = function () {
+            if (typeof(url) != 'undefined') {
+              window.location = url;
+            }
+          };
+          gtag('event', 'conversion', {
+              'send_to': 'AW-16920858087/XXjwCK3Q3KkaEOebv4Q_',
+              'event_callback': callback
+          });
+          return false;
+        }
+        </script>
+
+    <!-- ✅ Datos Estructurados (Schema.org) -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "MC FLETE Y MUDANZA",
+          "url": "https://fletesymudanzasparaguay.online",
+          "logo": "https://fletesymudanzasparaguay.online/img/logo_web_500x500.png",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+595 982 530 117",
+            "contactType": "customer service",
+            "areaServed": "Paraguay"
+          }
+        }
+        </script>
+
+
+
+
+    <style>
+        body {
+            font-family: 'Raleway', sans-serif;
+        }
+        .animate-fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
+    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
 </head>
-<body>
-    <h1>prueba 1</h1>
-    
+
+<body class="bg-white">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-8 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <h1 
+                    class="text-2xl font-bold"
+                    style="--tw-text-opacity: 1; color: #4447DB;"
+                >
+                    Doble A Creditos
+                </h1>
+            </div>
+            
+            <!-- Mobile menu button -->
+            <div class="md:hidden">
+                <button 
+                    onclick="toggleMenu()"
+                    class="p-2"
+                >
+                    <svg 
+                        xmlns="http://www.w3.org/2000/svg" 
+                        class="h-6 w-6" 
+                        fill="none" 
+                        viewBox="0 0 24 24" 
+                        stroke="currentColor"
+                        id="menuIcon"
+                    >
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                    <svg 
+                        xmlns="http://www.w3.org/2000/svg" 
+                        class="h-6 w-6 hidden" 
+                        fill="none" 
+                        viewBox="0 0 24 24" 
+                        stroke="currentColor"
+                        id="closeIcon"
+                    >
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:block">
+                <ul class="flex space-x-8">
+                    <li><a href="#inicio" class="font-medium hover:text-primary transition-colors">Inicio</a></li>
+                    <li><a href="#ventajas" class="font-medium hover:text-primary transition-colors">Ventajas</a></li>
+                    <li><a href="#como_funciona" class="font-medium hover:text-primary transition-colors">¿Cómo funciona?</a></li>
+                    <li><a href="#contacto" class="font-medium hover:text-primary transition-colors">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <div id="mobileMenu" class="md:hidden bg-white shadow-lg animate-fade-in hidden">
+            <ul class="flex flex-col space-y-4 p-4">
+                <li><a href="#inicio" class="block py-2 px-4 hover:bg-tertiary rounded transition-colors" onclick="closeMenu()">Inicio</a></li>
+                <li><a href="#ventajas" class="block py-2 px-4 hover:bg-tertiary rounded transition-colors" onclick="closeMenu()">Ventajas</a></li>
+                <li><a href="#como_funciona" class="block py-2 px-4 hover:bg-tertiary rounded transition-colors" onclick="closeMenu()">¿Cómo funciona?</a></li>
+                <li><a href="#contacto" class="block py-2 px-4 hover:bg-tertiary rounded transition-colors" onclick="closeMenu()">Contacto</a></li>
+            </ul>
+        </div>
+    </header>
+
+<!-- Hero Section -->
+<section id="inicio" class="relative min-h-[90vh] flex items-center overflow-hidden">
+    <!-- Background Image -->
+    <div 
+      class="absolute inset-0 z-0 bg-cover bg-center"
+      style="
+        background-image: url('src/fondo1.webp');
+        background-size: cover;
+        background-position: center;
+        filter: brightness(40%);
+      "
+    ></div>
+  
+    <!-- Content -->
+    <div class="container mx-auto px-4 relative z-10 text-white">
+      <div class="max-w-2xl animate-fade-in">
+        <div class="mb-6">
+          <img 
+            src="src/logo1.webp" 
+            alt="MC Fletes y Mudanzas Logo" 
+            class="w-48 h-auto mb-4"
+          />
+        </div>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+          Créditos al instante, sin complicaciones.
+        </h1>
+        <p class="text-xl md:text-2xl mb-8">
+          Pedí el dinero que necesitás, sin papeles ni vueltas. ¡Aprobación rápida y sin estrés!
+        </p>
+  
+        <a 
+        href="falta" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        style="
+          display: inline-flex;
+          align-items: center;
+          gap: 0.5rem;
+          padding: 1rem 1.5rem;
+          border-radius: 1.35rem;
+          font-weight: 600;
+          color: white;
+          background-color: rgb(37, 211, 102);
+          text-decoration: none;
+          transition: background-color 0.3s ease;
+        "
+        onmouseover="this.style.backgroundColor='rgb(32, 186, 87)'"
+        onmouseout="this.style.backgroundColor='rgb(37, 211, 102)'"
+      >
+        <img 
+          src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
+          alt="WhatsApp Logo" 
+          style="width: 1.5rem; height: 1.5rem;"
+        />
+        ¡Pedí tu crédito acá!
+      </a>
+      
+      </div>
+    </div>
+  </section>
+  
+
+    <!-- Services Section -->
+    <section id="ventajas" class="py-20 bg-tertiary">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-8">
+            ¿Por qué somos la mejor opción?
+            </h2>
+            
+            <p class="text-lg text-center max-w-3xl mx-auto mb-4">
+            En Doble A Créditos, estamos comprometidos a brindarte soluciones financieras rápidas, seguras y accesibles.
+            </p>
+            <p class="text-lg text-center max-w-3xl mx-auto mb-12">
+            Nuestro equipo está preparado para ayudarte a obtener el crédito que necesitás de manera ágil, sin complicaciones ni papeleos. Nos adaptamos a tu situación con opciones flexibles, 
+            trato humano y atención personalizada. En Doble A, tu tranquilidad es lo primero.
+            </p>
+            
+            
+            
+            
+            <ul class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto mb-16">
+            <li class="flex items-start gap-3 bg-white p-6 rounded-lg shadow-md">
+                <div class="text-primary font-bold text-lg">✓</div>
+                <div>
+                <strong class="font-semibold">Aprobación en el día:</strong> Te damos una respuesta en menos de 24hs, sabemos lo importante que es tu tiempo.
+                </div>
+            </li>
+            <li class="flex items-start gap-3 bg-white p-6 rounded-lg shadow-md">
+                <div class="text-primary font-bold text-lg">✓</div>
+                <div>
+                <strong class="font-semibold">Digital y Confidencial:</strong> Todo el proceso es via Whatsapp y tus datos están siempre seguros con nosotros.
+                </div>
+            </li>
+            <li class="flex items-start gap-3 bg-white p-6 rounded-lg shadow-md">
+                <div class="text-primary font-bold text-lg">✓</div>
+                <div>
+                <strong class="font-semibold">Requisitos Flexibles:</strong> Entendemos tu situación. No te juzgamos, te damos soluciones.
+                </div>
+            </li>
+            <li class="flex items-start gap-3 bg-white p-6 rounded-lg shadow-md">
+                <div class="text-primary font-bold text-lg">✓</div>
+                <div>
+                <strong class="font-semibold"> Renovación fácil y rápida:</strong> ¿Ya sos cliente? Renovar tu crédito es aún más simple. ¡Sin trámites extra!
+                </div>
+            </li>
+            </ul>
+            
+                        <!-- Carrusel -->
+            <div class="swiper mySwiper max-w-3xl mx-auto">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                <img
+                    src="/src/1.webp"
+                    alt=""
+                    class="w-full h-[800px] object-cover rounded-lg shadow-md"
+                />
+                </div>
+                <div class="swiper-slide">
+                <img
+                    src="/src/2.webp"
+                    alt=""
+                    class="w-full h-[800px] object-cover rounded-lg shadow-md"
+                />
+                </div>
+                <div class="swiper-slide">
+                <img
+                    src="/src/3.webp"
+                    alt=""
+                    class="w-full h-[800px] object-cover rounded-lg shadow-md"
+                />
+                </div>
+
+
+
+            </div>
+
+            <!-- Controles -->
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+        </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="como_funciona" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">
+                Así de fácil es tener tu plata
+            </h2>
+            
+            <p class="text-lg text-center max-w-2xl mx-auto mb-12">
+                Seguí estos simples pasos y conseguí tu crédito sin vueltas.
+            </p>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Paso 1 -->
+                <div class="text-center">
+                <div class="mx-auto bg-[#463EDD] rounded-full p-6 w-20 h-20 flex items-center justify-center mb-6">
+                    <span class="text-3xl font-bold text-primary-foreground text-white">1</span>
+                </div>
+                <h3 class="text-2xl font-bold mb-4 text-primary">Chateá con nosotros</h3>
+                <p class="text-muted-foreground">
+                    Iniciá la conversación por WhatsApp. Es rápido y sin compromiso.
+                </p>
+                </div>
+
+                <!-- Paso 2 -->
+                <div class="text-center">
+                <div class="mx-auto bg-[#463EDD] rounded-full p-6 w-20 h-20 flex items-center justify-center mb-6">
+                    <span class="text-3xl font-bold text-primary-foreground text-white">2</span>
+                </div>
+                <h3 class="text-2xl font-bold mb-4 text-primary text-blue-500">Recibí tu oferta</h3>
+                <p class="text-muted-foreground">
+                    Analizamos tu perfil al instante y te enviamos una propuesta a tu medida.
+                </p>
+                </div>
+
+                <!-- Paso 3 -->
+                <div class="text-center">
+                <div class="mx-auto bg-[#463EDD] rounded-full p-6 w-20 h-20 flex items-center justify-center mb-6">
+                    <span class="text-3xl font-bold text-primary-foreground text-white">3</span>
+                </div>
+                <h3 class="text-2xl font-bold mb-4 text-primary">¡Retirá tu préstamo!</h3>
+                <p class="text-muted-foreground">
+                    Pasás a retirar tu dinero de la sucursal más cercana.
+                </p>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-tertiary">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
+                Lo que dicen nuestros clientes
+            </h2>
+            
+            <div class="max-w-4xl mx-auto relative">
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <svg class="w-12 h-12 text-gray-200 mb-6" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 32 32">
+                        <path d="M10 8c-2.2 0-4 1.8-4 4v10h10V12h-6c0-1.1.9-2 2-2h2V8h-4zm12 0c-2.2 0-4 1.8-4 4v10h10V12h-6c0-1.1.9-2 2-2h2V8h-4z"></path>
+                    </svg>
+                    
+                    <div id="testimonials-container">
+                        <div class="testimonial active">
+                            <p class="text-lg mb-8 min-h-[120px] italic">
+                                "Solicitar mi crédito con Doble A fue súper rápido y sencillo. Me atendieron muy bien y el dinero llegó justo cuando lo necesitaba. ¡100% recomendable!"
+                            </p>
+                            
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-gray-300 rounded-full flex items-center justify-center">
+                                    <span class="text-xl font-bold">M</span>
+                                </div>
+                                <div class="ml-4">
+                                    <p class="font-bold">María López</p>
+                                    <p class="text-gray-600">Asunción</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="testimonial hidden">
+                            <p class="text-lg mb-8 min-h-[120px] italic">
+                                "Me sorprendió lo fácil que fue todo. Sin papeleos, sin vueltas, y con un trato muy humano. Volvería a pedir otro préstamo sin dudar."
+                            </p>
+                            
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-gray-300 rounded-full flex items-center justify-center">
+                                    <span class="text-xl font-bold">C</span>
+                                </div>
+                                <div class="ml-4">
+                                    <p class="font-bold">Carlos Rodríguez</p>
+                                    <p class="text-gray-600">San Lorenzo</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="testimonial hidden">
+                            <p class="text-lg mb-8 min-h-[120px] italic">
+                                "Excelente servicio, la respuesta fue inmediata y el proceso muy claro. Gracias a ellos pude solucionar un imprevisto rápido y sin estrés."
+                            </p>
+                            
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-gray-300 rounded-full flex items-center justify-center">
+                                    <span class="text-xl font-bold">L</span>
+                                </div>
+                                <div class="ml-4">
+                                    <p class="font-bold">Laura Benítez</p>
+                                    <p class="text-gray-600">Fernando de la Mora</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flex justify-center mt-8 space-x-2">
+                    <button
+                        onclick="showTestimonial(0)"
+                        class="w-3 h-3 rounded-full bg-primary"
+                        aria-label="Ver testimonio 1"
+                        id="dot-0"
+                    ></button>
+                    <button
+                        onclick="showTestimonial(1)"
+                        class="w-3 h-3 rounded-full bg-gray-300"
+                        aria-label="Ver testimonio 2"
+                        id="dot-1"
+                    ></button>
+                    <button
+                        onclick="showTestimonial(2)"
+                        class="w-3 h-3 rounded-full bg-gray-300"
+                        aria-label="Ver testimonio 3"
+                        id="dot-2"
+                    ></button>
+                </div>
+                
+                <div class="absolute top-1/2 -left-4 transform -translate-y-1/2">
+                    <button
+                        onclick="prevTestimonial()"
+                        class="w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center hover:bg-gray-100"
+                        aria-label="Testimonio anterior"
+                    >
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                        </svg>
+                    </button>
+                </div>
+                
+                <div class="absolute top-1/2 -right-4 transform -translate-y-1/2">
+                    <button
+                        onclick="nextTestimonial()"
+                        class="w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center hover:bg-gray-100"
+                        aria-label="Siguiente testimonio"
+                    >
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
+                ¡Contáctanos Para Más Detalles!
+            </h2>
+            
+            <div class="max-w-4xl mx-auto bg-tertiary p-8 rounded-lg shadow-md">
+                <h3 class="text-2xl font-opensans font-semibold mb-6">
+                    Doble A Creditos
+                </h3>
+                
+                <ul class="mb-8 grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <li class="flex items-center gap-2">
+                        <span class="text-primary font-bold">✓</span>
+                        Cobertura para todo Asunción y Gran Asunción
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <span class="text-primary font-bold">✓</span>
+                        Créditos accesibles y con tasas competitivas
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <span class="text-primary font-bold">✓</span>
+                        Trámites simples y seguros
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <span class="text-primary font-bold">✓</span>
+                        Respuesta rápida y atención personalizada
+                    </li>
+                </ul>
+                
+                <div class="space-y-6">
+                    <p class="text-lg">
+                        En Doble A Créditos, te ofrecemos soluciones financieras para que accedas al dinero que necesitás,
+                        de forma ágil y confiable.
+                        Olvidate de papeleos interminables y procesos complicados,
+                        nuestro equipo está listo para ayudarte con transparencia y rapidez.
+                    </p>
+                    
+                    <p class="text-lg">
+                        Con nosotros, tu tranquilidad es lo primero. Te acompañamos en cada paso para que obtengas tu crédito sin estrés y con total seguridad.
+                    </p>
+                </div>
+                
+                <div class="mt-10 flex flex-col items-center">
+                    <p class="font-opensans text-2xl font-medium mb-6">Tel: 0981 123 456</p>
+                    
+                    <div class="flex flex-col md:flex-row gap-4 mt-6">
+                        <a 
+                        href="falta" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        style="
+                            display: inline-flex;
+                            align-items: center;
+                            gap: 0.5rem;
+                            padding: 0.75rem 1.5rem;
+                            border-radius: 0.5rem;
+                            font-weight: 600;
+                            color: white;
+                            background-color: rgb(37, 211, 102);
+                            text-decoration: none;
+                            transition: background-color 0.3s ease;
+                        "
+                        onmouseover="this.style.backgroundColor='rgb(32, 186, 87)'"
+                        onmouseout="this.style.backgroundColor='rgb(37, 211, 102)'"
+                        >
+                        <img 
+                            src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
+                            alt="WhatsApp Logo" 
+                            style="width: 1.25rem; height: 1.25rem;"
+                        />
+                        Cotizar por WhatsApp
+                        </a>
+                        
+                        <a 
+                            href="falta" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            class="inline-flex items-center gap-2 bg-[#1877F2] text-white py-3 px-6 rounded-lg font-semibold hover:bg-[#0e5fc7] transition-colors"
+                        >
+                            <img 
+                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/1024px-Facebook_f_logo_%282019%29.svg.png" 
+                                alt="Facebook" 
+                                class="w-5 h-5"
+                            />
+                            ¡Síguenos en Facebook!
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto2" class="py-10 bg-white">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
+        ¿Tenés dudas o preferís que te contactemos?
+        </h2>
+        <div class="max-w-4xl mx-auto bg-tertiary p-8 rounded-lg shadow-md flex flex-col justify-center items-center">
+        <p class="text-center mb-6">
+            No hay problema. Dejanos tus datos de contacto y un asesor se comunicará contigo para aclarar lo que necesites.
+        </p>
+        <a
+            href="formulario.html"
+            class="mt-4 bg-[#463EDD] hover:bg-[#3c21c9] text-white font-semibold py-3 px-6 rounded-lg transition duration-300 ease-in-out mx-auto"
+        >
+            Rellenar Formulario
+        </a>
+        </div>
+    </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-10">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Doble A Creditos</h3>
+                    <p class="text-gray-300">
+                        texto
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contacto</h3>
+                    <p class="mb-2">
+                        <strong>Teléfono:</strong> 0981 123 456
+                    </p>
+                    <p class="mb-2">
+                        <strong>Área de cobertura:</strong> Asunción y Gran Asunción
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Síguenos</h3>
+                    <div class="flex space-x-4">
+                        <a 
+                            href="falta"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="text-white hover:text-blue-400 transition-colors"
+                        >
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                        <a 
+                            href="falta"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="text-white hover:text-green-400 transition-colors"
+                        >
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M20.465 3.54a12.252 12.252 0 00-8.733-3.617c-6.78 0-12.293 5.513-12.293 12.293 0 2.164.567 4.278 1.645 6.147L0 24l6.193-1.635a12.204 12.204 0 005.858 1.494h.005c6.781 0 12.293-5.513 12.293-12.293a12.252 12.252 0 00-3.584-8.728l-.3-.298zm-8.733 18.901h-.005a10.142 10.142 0 01-5.166-1.413l-.371-.22-3.84 1.009.98-3.637-.251-.396a10.22 10.22 0 01-1.559-5.44c0-5.635 4.587-10.221 10.227-10.221a10.15 10.15 0 017.235 2.997 10.15 10.15 0 012.963 7.236c0 5.635-4.587 10.221-10.223 10.221zm5.607-7.655c-.308-.154-1.823-.9-2.106-1.004-.283-.103-.489-.154-.695.154-.205.308-.797.983-.977 1.189-.18.205-.36.231-.668.077-.307-.154-1.3-.478-2.477-1.525-.915-.816-1.533-1.823-1.713-2.131-.18-.308-.019-.475.135-.629.138-.138.308-.36.462-.54.154-.18.205-.308.308-.513.103-.206.051-.386-.026-.54-.077-.154-.695-1.674-.952-2.294-.251-.602-.505-.514-.695-.524a12.452 12.452 0 00-.617-.01c-.219 0-.566.077-.86.386-.295.308-1.119 1.093-1.119 2.664 0 1.572 1.145 3.093 1.299 3.299.154.205 2.158 3.299 5.234 4.622 1.162.5 2.046.67 2.743.863.713.227 1.36.195 1.872.118.57-.085 1.755-.719 2-1.412.245-.693.245-1.29.171-1.412-.075-.128-.281-.205-.588-.359z" clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-gray-400">
+                    &copy; <span id="currentYear"></span> f.e. Todos los derechos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for functionality -->
+    <script>
+        // Mobile menu toggle
+        function toggleMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const menuIcon = document.getElementById('menuIcon');
+            const closeIcon = document.getElementById('closeIcon');
+            
+            if (mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.remove('hidden');
+                menuIcon.classList.add('hidden');
+                closeIcon.classList.remove('hidden');
+            } else {
+                mobileMenu.classList.add('hidden');
+                menuIcon.classList.remove('hidden');
+                closeIcon.classList.add('hidden');
+            }
+        }
+        
+        function closeMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const menuIcon = document.getElementById('menuIcon');
+            const closeIcon = document.getElementById('closeIcon');
+            
+            mobileMenu.classList.add('hidden');
+            menuIcon.classList.remove('hidden');
+            closeIcon.classList.add('hidden');
+        }
+        
+        // Testimonials slider
+        let currentTestimonial = 0;
+        const testimonials = document.querySelectorAll('.testimonial');
+        
+        function showTestimonial(index) {
+            testimonials.forEach((testimonial, i) => {
+                if (i === index) {
+                    testimonial.classList.remove('hidden');
+                    testimonial.classList.add('active');
+                    document.getElementById(`dot-${i}`).classList.add('bg-primary');
+                    document.getElementById(`dot-${i}`).classList.remove('bg-gray-300');
+                } else {
+                    testimonial.classList.add('hidden');
+                    testimonial.classList.remove('active');
+                    document.getElementById(`dot-${i}`).classList.remove('bg-primary');
+                    document.getElementById(`dot-${i}`).classList.add('bg-gray-300');
+                }
+            });
+            currentTestimonial = index;
+        }
+        
+        function nextTestimonial() {
+            const nextIndex = (currentTestimonial + 1) % testimonials.length;
+            showTestimonial(nextIndex);
+        }
+        
+        function prevTestimonial() {
+            const prevIndex = (currentTestimonial - 1 + testimonials.length) % testimonials.length;
+            showTestimonial(prevIndex);
+        }
+        
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+    <!-- SwiperJS Script al final del <body> -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  const swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    // breakpoints: {
+    //   640: {
+    //     slidesPerView: 2,
+    //   },
+    //   768: {
+    //     slidesPerView: 3,
+    //   },
+    // },
+  });
+</script>
 </body>
 </html>
