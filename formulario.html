@@ -60,10 +60,20 @@
       border-radius: 8px;
       box-sizing: border-box;
     }
+
+   
     .radio-group {
       display: flex;
       gap: 20px;
       margin-top: 5px;
+      align-items: center; /* <-- Agregá esto */
+    }
+
+    .radio-group label {
+      display: flex;
+      align-items: center;
+      gap: 6px; /* espacio entre el botón y el texto */
+      cursor: pointer;
     }
     button {
       width: 100%;
