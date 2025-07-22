@@ -85,6 +85,7 @@
       border-radius: 8px;
       cursor: pointer;
       transition: background-color 0.3s ease;
+      margin-bottom: 0.5rem;
     }
     button:hover {
       background-color: #3c21c9;
@@ -97,13 +98,17 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     }
+    .volver{
+      background: linear-gradient(90deg, #4f46e5, #8b5cf6);
+      width: 8rem;
+    }
 
   </style>
 </head>
 <body>
   <h2 class="titulo-gradiente">¡Estás a un paso!</h2>
   <p style="text-align: center;">Completá tus datos y nos pondremos en contacto</p>
-
+  
   <form id="contactForm" onsubmit="enviarPorWhatsApp(event)">
     <div class="form-group">
       <label for="nombre">Nombre *</label>
@@ -146,6 +151,7 @@
     </div>
 
     <button type="submit">Enviar solicitud</button>
+    <button >Regresar</button>
   </form>
 </body>
 </html>
