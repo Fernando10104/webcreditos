@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Exportar a Excel (.csv)</title>
+</head>
+<body>
+  <h2>Tabla de ejemplo</h2>
+
+  <table id="tabla" style="border: 1px solid black;">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Edad</th>
+        <th>Ciudad</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Eduardo</td>
+        <td>25</td>
+        <td>Encarnación</td>
+      </tr>
+      <tr>
+        <td>Pedro</td>
+        <td>30</td>
+        <td>Asunción</td>
+      </tr>
+      <tr>
+        <td>Laura</td>
+        <td>22</td>
+        <td>Villarrica</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <br>
+  <button onclick="exportarExcel()">Exportar a Excel (.csv)</button>
+
+  <script>
+    function exportarExcel() {
+      const tabla = document.getElementById("tabla");
+      let csv = "";
+
+      for (let fila of tabla.rows) {
+        // Recorremos las celdas de cada fila correctamente
+        let celdas = [...fila.cells].map(td => `${td.innerText}`).join(";");
+        csv += celdas + "\n";
+      }
+
+      // Agregamos el BOM para que Excel o LibreOffice lo lean con acentos
+      const BOM = "\uFEFF";
+      const blob = new Blob([BOM + csv], { type: "text/csv;charset=utf-8;" });
+      const link = document.createElement("a");
+      link.href = URL.createObjectURL(blob);
+      link.download = "tabla_exportada.csv";
+      link.click();
+    }
+  </script>
+</body>
+</html>
